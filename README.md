@@ -34,13 +34,13 @@ docker run -d \
   --name wyoming-audio8 \
   -p 10200:10200 \
   -v ./voices:/voices \
-  YOUR_DOCKERHUB_USERNAME/wyoming-audio8-tts:latest
+  wereling1992/wyoming-audio8-tts:latest
 ```
 
 **Option B – Build locally**
 
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/wyoming-audio8-tts.git
+git clone https://github.com/wereling1992/wyoming-audio8-tts.git
 cd wyoming-audio8-tts
 docker compose up -d --build
 ```
@@ -59,7 +59,7 @@ docker compose up -d --build
 ```yaml
 services:
   wyoming-audio8:
-    image: YOUR_DOCKERHUB_USERNAME/wyoming-audio8-tts:latest
+    image: wereling1992/wyoming-audio8-tts:latest
     container_name: wyoming-audio8
     restart: unless-stopped
     ports:
