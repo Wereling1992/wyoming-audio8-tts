@@ -4,8 +4,6 @@ Wyoming Protocol server for **[Audio8-TTS-Realistic-Air](https://huggingface.co/
 
 Easy integration with **Home Assistant**.
 
-> **Note**: This is a CPU-only build focused on Cantonese (`yue`). Inference is relatively slow.
-
 ## Features
 
 - Zero-shot voice cloning (just provide a reference `.wav`)
