@@ -97,19 +97,6 @@ volumes:
 - Provide the exact transcript via `REFERENCE_TEXT`
 - Avoid heavy reverb or extreme emotion in the reference
 
-## Limitations
-
-- CPU-only → relatively slow (several seconds per sentence)
-- Single voice only (this is the minimal version)
-- Model is downloaded on first start (~2.5 GB)
-
-## Future ideas
-
-- Multi-voice support (scan `/voices` directory)
-- GPU version
-- Streaming support
-- SGLang Omni acceleration
-
 ## Credits
 
 - Model: [Audio8-TTS-Realistic-Air](https://huggingface.co/Edge0/Audio8-TTS-Realistic-Air) by Edge0
