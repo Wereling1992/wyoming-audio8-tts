@@ -1,0 +1,27 @@
+services:
+  wyoming-audio8:
+    # 本機 build（預設）
+    build: .
+    # 如果你已經 push 去 Docker Hub，可以改用下面呢行，然後註解掉 build:
+    # image: 你的用戶名/wyoming-audio8-tts:latest
+    container_name: wyoming-audio8
+    restart: unless-stopped
+    ports:
+      - "10200:10200"
+    volumes:
+      # 放入你的粵語 reference.wav
+      - ./voices:/voices
+      # 快取模型下載
+      - huggingface_cache:/root/.cache/huggingface
+    environment:
+      - MODEL_ID=Edge0/Audio8-TTS-Realistic-Air
+      - LANGUAGE=yue
+      - VOICE_NAME=cantonese
+      - REFERENCE_AUDIO=/voices/reference.wav
+      # 建議填上 reference.wav 的完整文字稿，克隆效果會更好
+      - REFERENCE_TEXT=
+      - DEVICE=cpu
+      - URI=tcp://0.0.0.0:10200
+
+volumes:
+  huggingface_cache:
